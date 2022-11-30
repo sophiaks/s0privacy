@@ -1,0 +1,43 @@
+{
+
+    "manifest_version": 2,
+    "name": "s0privacy",
+    "version": "1.0",
+
+    "applications": {
+        "gecko": {
+          "id": "s0privacy@mozilla.org"
+        }
+      },
+    
+      "permissions": [
+        "http://*/*",
+        "https://*/*"
+      ],
+    
+      "browser_action": {
+        "default_icon": "button/beasts.png",
+        "default_title": "s0privacy",
+        "default_popup": "popup/s0privacy.html"
+      },
+    
+      "web_accessible_resources": [
+        "beasts/frog.jpg",
+        "beasts/turtle.jpg",
+        "beasts/snake.jpg"
+      ],
+  
+    "description": "Privacy detector for Mozilla Firefox",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["s0privacy.js"]
+      }
+    ]
+  
+  }
