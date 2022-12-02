@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cookies.css"/>
+
+  </head>
+
+  <body>
+    <div class="panel">
+      <div class="panel-section panel-section-header">
+        <div class="text-section-header" id="header-title"></div>
+      </div>
+      <div class="panel-section panel-section-header">
+        <div class="priv-score" id="score-text">
+          <div class="text-section-header">
+            Privacy Score: 
+            <span id="score-num"></span>
+          </div>
+        </div>
+        
+      </div>
+     
+      
+      <div id="stats">
+
+      </div>
+      <button type="button" class="collapsible">
+        Cookie details 
+        <i class="fa fa-bolt"></i>
+      </button>
+      <div class="content">
+        <ul id="cookie-list">
+        </ul>
+      </div> 
+    </div>
+    <script src="cookies.js"></script>
+    <script src="background.js"></script>
+  </body>
+
+</html>

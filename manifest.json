@@ -1,43 +1,29 @@
 {
-
-    "manifest_version": 2,
-    "name": "s0privacy",
-    "version": "1.0",
-
-    "applications": {
-        "gecko": {
-          "id": "s0privacy@mozilla.org"
-        }
-      },
-    
-      "permissions": [
-        "http://*/*",
-        "https://*/*"
-      ],
-    
-      "browser_action": {
-        "default_icon": "button/beasts.png",
-        "default_title": "s0privacy",
-        "default_popup": "popup/s0privacy.html"
-      },
-    
-      "web_accessible_resources": [
-        "beasts/frog.jpg",
-        "beasts/turtle.jpg",
-        "beasts/snake.jpg"
-      ],
-  
-    "description": "Privacy detector for Mozilla Firefox",
-  
-    "icons": {
-      "48": "icons/border-48.png"
-    },
-  
-    "content_scripts": [
-      {
-        "matches": ["*://*.mozilla.org/*"],
-        "js": ["s0privacy.js"]
-      }
-    ]
-  
-  }
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Privacy Detector",
+    "default_popup": "cookies.html",
+    "default_icon": {
+      "19": "icons/bowl1.png",
+      "38": "icons/bowl64.png"
+    }
+  },
+  "description": "Privacy Detector for Mozilla Firefox",
+  "icons": {
+    "48": "icons/bowl1.png",
+    "64": "icons/bowl64.png"
+  },
+    "background": {
+      "scripts": ["background.js"]
+  },
+  "manifest_version": 2,
+  "name": "Privacy Detector",
+  "version": "1.0",
+  "permissions": ["cookies","<all_urls>","tabs", "storage", "http://*/*", "https://*/*"],
+  "content-scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["cookies.js"]
+    }
+  ]
+}

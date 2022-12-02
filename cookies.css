@@ -1,0 +1,51 @@
+html, body {
+  font-family: 'Fira Code', sans-serif; 
+  padding: 0.2rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.panel {
+  padding: 5px;
+}
+
+.priv-score {
+  margin: auto;
+  text-align: center;
+}
+
+.text-section-header {
+  color: #123; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  line-height: 1; 
+  text-align: center;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  align-items: center;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.content {
+  padding: 0 18px;
+  overflow: hidden;
+  display: none;
+  background-color: #f1f1f1;
+}
